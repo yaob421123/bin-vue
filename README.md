@@ -5,17 +5,19 @@
 ### 安装使用
 ```
 npm install --save-dev bin-vue
-
-// 全局
+```
+### 全局安装
+```
 import Vue from 'vue';
 import binvue from 'bin-vue';
 Vue.use(binvue);
+```
 
-// 按需引入
+### 按需引入
+```
 import Vue from 'vue';
 import {Button} from 'bin-vue/bindist/dist/button';
 Vue.component(Button.name, Button);
-
 ```
 
 ### 参考、使用的项目

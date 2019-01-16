@@ -16,7 +16,6 @@ import Vue from 'vue';
 import {Button} from 'bin-vue/bindist/dist/button';
 Vue.component(Button.name, Button);
 
-Vue.use(ElementUI);
 ```
 
 ### 参考、使用的项目

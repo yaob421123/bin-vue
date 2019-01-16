@@ -1,29 +1,27 @@
-# vueui
+# bin-vue
 
-## Project setup
-```
-npm install
-```
+#### bin-vue 是基于Vue3.x的移动端&微信UI。
 
-### Compiles and hot-reloads for development
+### 安装使用
 ```
-npm run serve
-```
+npm install --save-dev bin-vue
 
-### Compiles and minifies for production
-```
-npm run build
-```
+// 全局
+import Vue from 'vue';
+import binvue from 'bin-vue';
+Vue.use(binvue);
 
-### Run your tests
-```
-npm run test
-```
+// 按需引入
+import Vue from 'vue';
+import {Button} from 'bin-vue/bindist/dist/button';
+Vue.component(Button.name, Button);
 
-### Lints and fixes files
-```
-npm run lint
+Vue.use(ElementUI);
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 参考、使用的项目
+
+* <a href="https://github.com/ydcss/vue-ydui" target="_blank">[vue-ydui]</a>)
+* <a href="https://github.com/ElemeFE/element" target="_blank">[element]</a>)
+* <a href="https://github.com/kitorv/vue-ui-docs" target="_blank">[vue-ui-docs]</a>)
+* <a href="https://github.com/uiw-react/uiw" target="_blank">[uiw]</a>)

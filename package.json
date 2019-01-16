@@ -1,0 +1,59 @@
+{
+  "name": "bin-vue",
+  "version": "0.0.3",
+  "author": "YaoBin <yaob421123@163.com>",
+  "main": "bindist/binui.js",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:npm": "webpack --config build/webpack.common.conf.js",
+    "lint": "vue-cli-service lint"
+  },
+  "files": [
+    "bindist"
+  ],
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "vue": "^2.5.21",
+    "vue-loader": "^15.5.1",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-eslint": "^3.3.0",
+    "@vue/cli-service": "^3.3.0",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-merge": "^4.2.1",
+    "autoprefixer": "^9.4.5",
+    "babel-loader": "^8.0.5",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "html-loader": "^0.5.5",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^8.1.0",
+    "markdown-it": "^8.4.2",
+    "markdown-it-container": "^2.0.0",
+    "markdown-loader": "^4.0.0",
+    "vue-markdown-loader": "^2.4.1",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "license": "MIT"
+}

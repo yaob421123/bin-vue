@@ -22,7 +22,7 @@ Vue.component(Button.name, Button);
 
 ### 参考、使用的项目
 
-* <a href="https://github.com/ydcss/vue-ydui" target="_blank">[vue-ydui]</a>)
-* <a href="https://github.com/ElemeFE/element" target="_blank">[element]</a>)
-* <a href="https://github.com/kitorv/vue-ui-docs" target="_blank">[vue-ui-docs]</a>)
-* <a href="https://github.com/uiw-react/uiw" target="_blank">[uiw]</a>)
+* <a href="https://github.com/ydcss/vue-ydui" target="_blank">[vue-ydui]</a>
+* <a href="https://github.com/ElemeFE/element" target="_blank">[element]</a>
+* <a href="https://github.com/kitorv/vue-ui-docs" target="_blank">[vue-ui-docs]</a>
+* <a href="https://github.com/uiw-react/uiw" target="_blank">[uiw]</a>

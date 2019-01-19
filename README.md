@@ -19,6 +19,11 @@ import Vue from 'vue';
 import {Button} from 'bin-vue/bindist/dist/button';
 Vue.component(Button.name, Button);
 ```
+### 已完成组件
+- [x] Button 按钮
+- [x] Icon 图标
+- [x] Flexbox 布局
+- [x] Grid 九宫格
 
 ### 参考、使用的项目
 

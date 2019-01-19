@@ -17,6 +17,7 @@ Vue.use(binvue);
 ```
 import Vue from 'vue';
 import {Button} from 'bin-vue/bindist/dist/button';
+import 'bin-vue/bindist/dist/button/index.css';
 Vue.component(Button.name, Button);
 ```
 ### 已完成组件

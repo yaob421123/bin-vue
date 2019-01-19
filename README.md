@@ -10,6 +10,7 @@ npm install --save-dev bin-vue
 ```
 import Vue from 'vue';
 import binvue from 'bin-vue';
+import 'bin-vue/bindist/binui.css';
 Vue.use(binvue);
 ```
 

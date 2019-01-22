@@ -1,0 +1,66 @@
+{
+  "name": "bin-vue",
+  "version": "0.0.335",
+  "author": "YaoBin <yaob421123@163.com>",
+  "main": "bindist/binui.js",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:npm": "webpack --color --hide-modules --config build/webpack.common.conf.js",
+    "lint": "vue-cli-service lint"
+  },
+  "files": [
+    "bindist"
+  ],
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-eslint": "^3.3.0",
+    "@vue/cli-service": "^3.3.0",
+    "autoprefixer": "^9.4.5",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^8.1.0",
+    "markdown-it": "^8.4.2",
+    "markdown-it-container": "^2.0.0",
+    "markdown-loader": "^4.0.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "shebang-loader": "^0.0.1",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "vue": "^2.5.21",
+    "vue-loader": "^15.5.1",
+    "vue-markdown-loader": "^2.4.1",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.21",
+    "vuex": "^3.0.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "license": "MIT",
+  "dependencies": {
+    "css-loader": "^2.1.0"
+  }
+}

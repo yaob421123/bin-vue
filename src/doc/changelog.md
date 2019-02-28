@@ -1,6 +1,8 @@
 ## 更新日志
 
 ### 0.0.1 ~ 1.0.0
+* 新增 Cell 表单 <router-link to="/cell">#Cell</router-link>
+* 新增 Badge 角标 <router-link to="/badge">#Badge</router-link>
 * 新增 Grid 九宫格 <router-link to="/grid">#Grid</router-link>
 * 新增 Flexbox 布局 <router-link to="/flexbox">#Flexbox</router-link>
 * 新增 Icon 图标 <router-link to="/icon">#Icon</router-link>

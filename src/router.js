@@ -52,6 +52,16 @@ export default new Router({
           path: '/grid',
           name: 'Icon 图标',
           component: r => require.ensure([], () => r(require('./doc/grid.md')))
+        },
+        {
+          path: '/badge',
+          name: 'Badge 角标',
+          component: r => require.ensure([], () => r(require('./doc/badge.md')))
+        },
+        {
+          path: '/cell',
+          name: 'Cell 表单',
+          component: r => require.ensure([], () => r(require('./doc/cell.md')))
         }
       ]
     },

@@ -1,13 +1,14 @@
 ## bin-vue
-bin-vue 是基于Vue3.x的移动端&微信UI。
+bin-vue 是基于Vue3.x的UI。
 
 ### 目的
 语言组织中......
 
 ### 对应组件
-- <a href="https://github.com/ydcss/vue-ydui" target="_blank">Button</a>
-- Icon
-- Flex
+- <a href="https://github.com/ydcss/vue-ydui" target="_blank">Button 按钮</a>
+- <a href="https://github.com/ydcss/vue-ydui" target="_blank">Icon 图标</a>
+- <a href="https://github.com/ydcss/vue-ydui" target="_blank">Flexbox 布局</a>
+- <a href="https://github.com/ydcss/vue-ydui" target="_blank">Grid 九宫格</a>
 
 ### 参考、使用的项目
 - <a href="https://github.com/ydcss/vue-ydui" target="_blank">[vue-ydui]</a> 一只基于Vue2.x的移动端&微信UI。 -YDUI Touch

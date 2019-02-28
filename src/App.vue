@@ -33,6 +33,12 @@
           <dd>
             <router-link to="/grid">Grid 九宫格</router-link>
           </dd>
+          <dd>
+            <router-link to="/badge">Badge 角标</router-link>
+          </dd>
+          <dd>
+            <router-link to="/cell">Cell 表单</router-link>
+          </dd>
         </dl>
       </div>
       <div class="docs-content">

@@ -13,7 +13,9 @@ module.exports = {
     '/dist/button/index': './packages/components/button/index.js',
     '/dist/icon/index': './packages/components/icon/index.js',
     '/dist/flexbox/index': './packages/components/flexbox/index.js',
-    '/dist/grid/index': './packages/components/grid/index.js'
+    '/dist/grid/index': './packages/components/grid/index.js',
+    '/dist/badge/index': './packages/components/badge/index.js',
+    '/dist/cell/index': './packages/components/cell/index.js'
   },
   output: {
     path: path.join(__dirname, '../bindist'),

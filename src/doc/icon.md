@@ -1,3 +1,65 @@
+<script>
+export default {
+  data () {
+    return  {
+      iconList: ['loading', 'reload', 'picasa'],
+      iconList2: [
+        'caret-down', 'arrow-down','down-square-o','down-square',  'down-circle-o', 'down-circle',
+        'caret-up','arrow-up', 'up-square-o', 'up-square','up-circle-o','up-circle', 'caret-left',
+        'arrow-left','left-square-o','left-square',  'left-circle-o', 'left-circle', 'caret-right',
+        'arrow-right','right-square-o', 'right-square','right-circle-o', 'right-circle', 'shrink',
+        'arrows-alt','d-arrow-left','d-arrow-right','enter', 'rollback', 'd-caret','backward',
+        'forward',  'logout', 'login',  'swap-right', 'swap', 'verticle-left', 'verticle-right',
+        'play-circle-o',  'play-circle','menu-fold', 'menu-unfold'
+      ],
+      iconList3: [
+        "plus", 'plus-circle-o','plus-circle', 'plus-square', 'plus-square-o', "question-circle-o", 
+        "minus", 'minus-circle-o', 'minus-circle', 'minus-square', 'minus-square-o',"question-circle", 
+        "close", "circle-close-o", "circle-close",'close-square', 'close-square-o', "asterisk", 
+        "check", "circle-check-o", "circle-check",'check-square','check-square-o', "copyright",
+      ],
+      iconList4: [
+        'file-text', 'file-jpg', 'file-unknown', 'file-add', 'file-excel', 'file-pdf',
+        'folder-add', 'folder-open', 'paper-clip'
+      ],
+      iconList5: [
+        'heart-off', 'heart-on', 'star-on', 'star-off','lock', 'unlock','dashboard',
+        'area-chart', 'bar-chart', 'dot-chart','pie-chart', 
+        'dislike-o', 'like-o','loading', 'reload','appstore', 'appstore-o',
+        'tag', 'tag-o','tags','tags-o', 'setting','setting-o','map','table','qrcode','barcode','printer',
+        'cloud-upload','cloud-upload-o', 'cloud-download','cloud-download-o', 'download','message','message-o',
+        'user', 'usergroup-add', 'zoom-in', 'zoom-out','time', 'time-o',
+        "bell", 'camera-o', 'coffee', 'document', 'delete', 'date', 'edit',  'eye-o', 'environment-o', 
+        'filter', 'global', 'inbox', 'home', 'laptop', 'link',  'menu', 'mobile', 'more', 'notification', 
+        'picture', 'picasa', 'pay-circle-o', 'pay', 'poweroff',  'save', 'safety', 'search', 'shopping-cart', 
+        'share',   'upload', 'verification', 'video-camera', 'wifi'
+      ],
+      iconList6: [
+        'uiw', 'windows', "linux", 'apple', 'facebook', 'twitter', 'adobe', "baidu", "ali-pay", 
+        'android-o', 'android','reddit', 'github', 'github-o', "aliwangwang",   "dingding", 
+        "foursquare", "linkedin", "pinterest", "qq",  "weibo", "taobao", "weixin", 'css3', 'html5'
+      ],
+      iconList7: [
+        "chrome", "safari", "firefox", "opera", "ie"
+      ]
+    }
+  }
+}
+</script>
+<style lang="less">
+.demo-grid-box {
+  height: 100%;
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  p {
+    margin-top: 10px;
+  }
+}
+</style>
+
 ## Icon 图标
 语义化的矢量图形，内置`uiw icons`图标属于UI框架常用图形字体。<a href="https://uiw-react.github.io/icons/" target="_blank">#uiw icons</a>
 
@@ -59,105 +121,25 @@ Vue.component(Icon.name, Icon);
 <b-icon type="uiw-wxbgongju" size="20" color="#ff0000"></b-icon>
 <b-icon type="uiw-wxbmingxingdianp" size="20" color="#ff0000"></b-icon>
 ```
-注意：这里 `.w-icon-` 是当前默认引用的字体文件，w-icon-uiw- 是引用自己制作的字体文件，来覆盖默认的字体文件，就当成一个新的作用域。
+注意：这里 `.w-icon-` 是当前默认引用的字体文件，`w-icon-uiw-` 是引用自己制作的字体文件，来覆盖默认的字体文件，就当成一个新的作用域。
 
 ### Attributes
 | 参数        | 说明                       | 类型         | 默认值   |
 |-------------|--------------------------- |------------- |----------|
 | type        | 图标的名称                 | string       | —        |
-| size        | 字体大小单位px             | string / number| 18       |
+| size        | 字体大小单位px             | string / number| 18px       |
 | color       | 字体颜色                   | string       | #999     |
 | spin        | 是否有旋转动画             | boolean      | false    |
 
-### 实例
+### 图标旋转实例
 :::demo Icon 图标
 ```html
 <template>
   <div>
-    <div class="demo-tit">
-      图标旋转实例
-    </div>
     <b-grid column="6" :show-border="false">
       <b-grid-item :griditem-h="100" v-for="(item, index) in iconList" :key="index" style="padding:3px">
         <div class="demo-grid-box">
-          <b-icon :type="item" size="16" spin></b-icon>
-          <p>{{ item }}</p>
-        </div>
-      </b-grid-item>
-    </b-grid>
-    <div class="demo-tit">
-      方向性图标
-    </div>
-    <b-grid column="6" :show-border="false">
-      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList2" :key="index" style="padding:3px">
-        <div class="demo-grid-box">
-          <b-icon :type="item" size="16"></b-icon>
-          <p>{{ item }}</p>
-        </div>
-      </b-grid-item>
-    </b-grid>
-    <div class="demo-tit">
-      提示建议性图标
-    </div>
-    <b-grid column="6" :show-border="false">
-      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList3" :key="index" style="padding:3px">
-        <div class="demo-grid-box">
-          <b-icon :type="item" size="16"></b-icon>
-          <p>{{ item }}</p>
-        </div>
-      </b-grid-item>
-    </b-grid>
-    <div class="demo-tit">
-      符号
-    </div>
-    <b-grid column="6" :show-border="false">
-      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList4" :key="index" style="padding:3px">
-        <div class="demo-grid-box">
-          <b-icon :type="item" size="16"></b-icon>
-          <p>{{ item }}</p>
-        </div>
-      </b-grid-item>
-    </b-grid>
-    <div class="demo-tit">
-      文件
-    </div>
-    <b-grid column="6" :show-border="false">
-      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList5" :key="index" style="padding:3px">
-        <div class="demo-grid-box">
-          <b-icon :type="item" size="16"></b-icon>
-          <p>{{ item }}</p>
-        </div>
-      </b-grid-item>
-    </b-grid>
-    <div class="demo-tit">
-      其它
-    </div>
-    <b-grid column="6" :show-border="false">
-      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList6" :key="index" style="padding:3px">
-        <div class="demo-grid-box">
-          <b-icon :type="item" size="16"></b-icon>
-          <p>{{ item }}</p>
-        </div>
-      </b-grid-item>
-    </b-grid>
-    <div class="demo-tit">
-      品牌标识
-    </div>
-    <b-grid column="6" :show-border="false">
-      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList7" :key="index" style="padding:3px">
-        <div class="demo-grid-box">
-          <b-icon :type="item" size="16"></b-icon>
-          <p>{{ item }}</p>
-        </div>
-      </b-grid-item>
-    </b-grid>
-    <div class="demo-tit">
-      浏览器图标
-    </div>
-    <b-grid column="6" :show-border="false">
-      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList8" :key="index" style="padding:3px">
-        <div class="demo-grid-box">
-          <b-icon :type="item" size="16"></b-icon>
+          <b-icon :type="item" size="20" spin></b-icon>
           <p>{{ item }}</p>
         </div>
       </b-grid-item>
@@ -165,22 +147,215 @@ Vue.component(Icon.name, Icon);
   </div>
 </template>
 
-<style lang="less">
-.demo-tit {
-  font-weight:bold;
-  padding:5px 0;
-}
-.demo-grid-box {
-  height: 100%;
-  background: #f4f4f4;
-  display: flex;
-  align-items: center;
-  justify-content:center;
-  flex-direction: column;
-  p {
-    margin-top: 10px;
+<script>
+export default {
+  data () {
+    return  {
+      iconList: ['loading', 'reload', 'picasa']
+    }
   }
 }
-</style>
+</script>
+```
+:::
+
+### 方向性图标
+:::demo Icon 图标
+```html
+<template>
+  <div>
+    <b-grid column="6" :show-border="false">
+      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList2" :key="index" style="padding:3px">
+        <div class="demo-grid-box">
+          <b-icon :type="item" size="20"></b-icon>
+          <p>{{ item }}</p>
+        </div>
+      </b-grid-item>
+    </b-grid>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return  {
+      iconList2: [
+        'caret-down', 'arrow-down','down-square-o','down-square',  'down-circle-o', 'down-circle',
+        'caret-up','arrow-up', 'up-square-o', 'up-square','up-circle-o','up-circle', 'caret-left',
+        'arrow-left','left-square-o','left-square',  'left-circle-o', 'left-circle', 'caret-right',
+        'arrow-right','right-square-o', 'right-square','right-circle-o', 'right-circle', 'shrink',
+        'arrows-alt','d-arrow-left','d-arrow-right','enter', 'rollback', 'd-caret','backward',
+        'forward',  'logout', 'login',  'swap-right', 'swap', 'verticle-left', 'verticle-right',
+        'play-circle-o',  'play-circle','menu-fold', 'menu-unfold'
+      ]
+    }
+  }
+}
+</script>
+```
+:::
+
+### 符号
+:::demo Icon 图标
+```html
+<template>
+  <div>
+    <b-grid column="6" :show-border="false">
+      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList3" :key="index" style="padding:3px">
+        <div class="demo-grid-box">
+          <b-icon :type="item" size="20"></b-icon>
+          <p>{{ item }}</p>
+        </div>
+      </b-grid-item>
+    </b-grid>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return  {
+      iconList3: [
+        "plus", 'plus-circle-o','plus-circle', 'plus-square', 'plus-square-o', "question-circle-o", 
+        "minus", 'minus-circle-o', 'minus-circle', 'minus-square', 'minus-square-o',"question-circle", 
+        "close", "circle-close-o", "circle-close",'close-square', 'close-square-o', "asterisk", 
+        "check", "circle-check-o", "circle-check",'check-square','check-square-o', "copyright",
+      ]
+    }
+  }
+}
+</script>
+```
+:::
+
+### 文件
+:::demo Icon 图标
+```html
+<template>
+  <div>
+    <b-grid column="6" :show-border="false">
+      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList4" :key="index" style="padding:3px">
+        <div class="demo-grid-box">
+          <b-icon :type="item" size="20"></b-icon>
+          <p>{{ item }}</p>
+        </div>
+      </b-grid-item>
+    </b-grid>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return  {
+      iconList4: [
+        'file-text', 'file-jpg', 'file-unknown', 'file-add', 'file-excel', 'file-pdf',
+        'folder-add', 'folder-open', 'paper-clip'
+      ]
+    }
+  }
+}
+</script>
+```
+:::
+
+### 其它
+:::demo Icon 图标
+```html
+<template>
+  <div>
+    <b-grid column="6" :show-border="false">
+      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList5" :key="index" style="padding:3px">
+        <div class="demo-grid-box">
+          <b-icon :type="item" size="20"></b-icon>
+          <p>{{ item }}</p>
+        </div>
+      </b-grid-item>
+    </b-grid>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return  {
+      iconList5: [
+        'heart-off', 'heart-on', 'star-on', 'star-off','lock', 'unlock','dashboard',
+        'area-chart', 'bar-chart', 'dot-chart','pie-chart', 
+        'dislike-o', 'like-o','loading', 'reload','appstore', 'appstore-o',
+        'tag', 'tag-o','tags','tags-o', 'setting','setting-o','map','table','qrcode','barcode','printer',
+        'cloud-upload','cloud-upload-o', 'cloud-download','cloud-download-o', 'download','message','message-o',
+        'user', 'usergroup-add', 'zoom-in', 'zoom-out','time', 'time-o',
+        "bell", 'camera-o', 'coffee', 'document', 'delete', 'date', 'edit',  'eye-o', 'environment-o', 
+        'filter', 'global', 'inbox', 'home', 'laptop', 'link',  'menu', 'mobile', 'more', 'notification', 
+        'picture', 'picasa', 'pay-circle-o', 'pay', 'poweroff',  'save', 'safety', 'search', 'shopping-cart', 
+        'share',   'upload', 'verification', 'video-camera', 'wifi'
+      ]
+    }
+  }
+}
+</script>
+```
+:::
+
+### 品牌标识
+:::demo Icon 图标
+```html
+<template>
+  <div>
+    <b-grid column="6" :show-border="false">
+      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList6" :key="index" style="padding:3px">
+        <div class="demo-grid-box">
+          <b-icon :type="item" size="20"></b-icon>
+          <p>{{ item }}</p>
+        </div>
+      </b-grid-item>
+    </b-grid>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return  {
+      iconList6: [
+        'uiw', 'windows', "linux", 'apple', 'facebook', 'twitter', 'adobe', "baidu", "ali-pay", 
+        'android-o', 'android','reddit', 'github', 'github-o', "aliwangwang",   "dingding", 
+        "foursquare", "linkedin", "pinterest", "qq",  "weibo", "taobao", "weixin", 'css3', 'html5'
+      ]
+    }
+  }
+}
+</script>
+```
+:::
+
+### 浏览器图标
+:::demo Icon 图标
+```html
+<template>
+  <div>
+    <b-grid column="6" :show-border="false">
+      <b-grid-item :griditem-h="100" v-for="(item, index) in iconList7" :key="index" style="padding:3px">
+        <div class="demo-grid-box">
+          <b-icon :type="item" size="20"></b-icon>
+          <p>{{ item }}</p>
+        </div>
+      </b-grid-item>
+    </b-grid>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return  {
+      iconList7: [
+        "chrome", "safari", "firefox", "opera", "ie"
+      ]
+    }
+  }
+}
+</script>
 ```
 :::

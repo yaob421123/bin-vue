@@ -27,7 +27,7 @@ Vue.component(Button.name, Button);
 - [x] Flexbox 布局
 - [x] Grid 九宫格
 - [x] Badge 角标
-- [x] Cell 表单
+- [] Cell 表单
 
 ### 参考、使用的项目
 

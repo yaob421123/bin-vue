@@ -1,6 +1,6 @@
 # bin-vue
 
-#### bin-vue 是基于Vue3.x的移动端&微信UI。
+#### bin-vue 是基于Vue2.x的移动端&微信UI。
 
 ### 安装使用
 ```
